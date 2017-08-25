@@ -4,6 +4,8 @@
     {
         public int position { get { return pos; } }
 
+        public string ChannelId { get { return this.ID; }}
+        
         internal string ID;
         internal int pos;
         internal DiscordClient client;
