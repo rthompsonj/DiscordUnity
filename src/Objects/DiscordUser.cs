@@ -34,6 +34,8 @@ namespace DiscordUnity
         /// <summary> The server this member is in </summary>
         public DiscordServer server { get { return client._servers[serverID]; } }
 
+        public string UserId { get { return this.ID; }}
+        
         internal string ID;
         internal string avatarID;
         internal string serverID;

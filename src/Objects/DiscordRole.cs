@@ -19,6 +19,8 @@ namespace DiscordUnity
         /// <summary> The position of this role. </summary>
         public int position { get { return pos; } }
 
+        public string RoleId { get { return this.ID; }}
+        
         internal string ID;
         internal string serverID;
         internal int pos;

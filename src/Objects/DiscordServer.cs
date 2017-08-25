@@ -37,6 +37,8 @@ namespace DiscordUnity
         /// <summary> The embedded channel of this server. </summary>
         public DiscordTextChannel embedchannel { get { return channels.Where(x => x.ID == embedChannelID).FirstOrDefault(); } }
 
+        public string ServerId{ get { return this.ID; }}
+        
         internal string ID;
         internal string iconID;
         internal string splashID;

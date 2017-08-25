@@ -17,8 +17,21 @@ namespace DiscordUnity
         public DateTime createdAt { get; internal set; }
         /// <summary> When is this message edited? </summary>
         public DateTime editedAt { get; internal set; }
+
         /// <summary> The channel this message is created in. </summary>
-        public DiscordTextChannel channel { get { return client._channels[channelID]; } }
+        public DiscordTextChannel channel
+        {
+            get
+            {
+                DiscordTextChannel _channel;
+                if (client._channels.TryGetValue(channelID, out _channel))
+                {
+                    return _channel;
+                }
+                return null;
+                //return client._channels[channelID];
+            }
+        }
 
         internal string ID;
         internal string channelID;
