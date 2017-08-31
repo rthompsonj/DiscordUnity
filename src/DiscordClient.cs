@@ -459,11 +459,14 @@ namespace DiscordUnity
                 }
             }
 
-            catch (Exception e)
+            catch /*(Exception e)*/
             {
+                // PORTALARIUM
+                /*  Not much we can do about this and it is not helpful to show it.
                 Debug.LogError(e.Message);
                 Debug.LogError(e.Source);
                 Debug.LogError(e.TargetSite.ToString());
+                */
             }
         }
 
